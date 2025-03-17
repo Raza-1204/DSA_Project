@@ -1,4 +1,4 @@
-# DSA_Project 
+# DSA_Project  M.junaid raza(2023313), Ammar Ali(2023166)
 Deliverable 1: Project Proposal & Conceptual Design
 Objective:
 The goal of this project is to create an online ordering system (eCommerce platform) where customers can browse and purchase products, and the system will process and track their orders. This project will focus on key data structures and algorithms to manage the products, orders, and transactions in an efficient and scalable way.
