@@ -1,0 +1,60 @@
+Deliverable 3: Algorithm Implementation & Performance Evaluation
+Objective
+Implement core algorithms within the Online Ordering System and evaluate their performance in terms of efficiency, optimization, and edge case handling.
+1. Algorithm Integration
+The following key algorithms have been implemented in the system:
+Algorithm	Purpose	Data Structure Used
+Product Search Algorithm	Efficiently retrieves product details by ID	unordered_map
+Order Processing Algorithm	Handles order queuing and processing (FIFO)	queue
+Shopping Cart Management	Adds/removes products and supports undo functionality	vector, stack
+Inventory Update Algorithm	Updates stock after successful purchases	unordered_map
+Invoice Generation	Calculates total price and generates an order summary	vector
+
+2. Optimization & Efficiency Analysis
+Current Performance Analysis
+Algorithm	Time Complexity	Space Complexity	Optimizations Implemented
+Product Search	O(1) (average)	O(n)	Use of unordered_map for fast lookup
+Order Processing	O(1)	O(n)	FIFO processing using queue
+Shopping Cart Management	O(1) for add/remove	O(n)	Dynamic array (vector) & stack for undo
+Inventory Update	O(1)	O(n)	Direct hashmap updates
+Invoice Generation	O(n)	O(n)	Iteration over cart items
+
+
+Alternative Approaches Considered
+Functionality	Current Approach	Alternative Approach	Reason for Selection
+Product Storage	unordered_map	map or array	Faster average-case lookup (O(1))
+Cart Management	vector	list	Faster indexed access, easier undo with stack
+Order Processing	queue	priority_queue	FIFO suffices for basic processing
+Inventory Tracking	unordered_map	Relational DB (future upgrade)	Simplicity and speed
+3. Edge Case Handling
+Tested Edge Cases & Results
+Scenario	Expected Outcome	Result	Handling Mechanism
+Adding a product with invalid ID	Displays 'Product not available.'	 Working	Validates using inventory.find()
+Checking out with an empty cart	Displays 'Shopping cart is empty.'	 Working	Checks if shoppingCart.empty()
+Ordering an out-of-stock product	Displays 'Item out of stock.'	 Working	Inventory quantity validation before checkout
+Undo with no previous actions	Displays 'No action to undo.'	 Working	Checks if undoStack is empty
+Processing orders with an empty queue	Displays 'No orders to process.'	 Working	Checks if orderQueue is empty
+4. Implementation of Course Concepts
+ Applied Algorithms & Techniques
+Concept	Implementation
+Hashing	Product storage and retrieval using unordered_map
+Queues	Order management using queue (FIFO processing)
+Stacks	Undo functionality in shopping cart
+Dynamic Arrays	Managing the shopping cart with vector
+Searching Algorithms	Product search via ID in constant time (hashing)
+Problem-Solving	Inventory management, order processing, and checkout logic
+
+
+ Class Concepts Reflected
+Concept	Applied In
+Efficient data retrieval	Hashing used for product search and storage
+Memory management	Dynamic arrays (vector) used for cart management
+Linear data structures	Stack and Queue for shopping cart and order processing
+Algorithm optimization	Time/space complexity analysis for each algorithm
+Real-World Mapping	Simulating a real-world eCommerce system
+Conclusion
+The system successfully integrates core algorithms and demonstrates optimized performance for product management, order processing, and inventory updates. Edge cases have been addressed to ensure stability, and algorithmic approaches reflect the concepts learned in class.
+Future Improvements
+Implement persistent storage (file handling or databases) for inventory and order tracking.
+Add user authentication for admins/customers.
+Integrate additional optimizations for large datasets or multi-user environments.
