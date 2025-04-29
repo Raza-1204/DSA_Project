@@ -1,0 +1,45 @@
+Deliverable 2: Initial Implementation & Data Structure Integration
+Objective
+Implement and demonstrate the core data structures of the Online Ordering System. This includes showing their functionality, efficiency analysis, and how they reflect classroom concepts.
+1. Basic Working Code
+The core data structures have been implemented in C++ as part of the Online Ordering System.
+Implemented Data Structures:
+- unordered_map → for product storage (Hashmap)
+- vector → for the shopping cart (Dynamic Array)
+- stack → for undo functionality (Stack)
+- queue → for order processing (Queue)
+2. Functional Demonstration
+Hashmap (unordered_map):
+• Purpose: Fast storage and retrieval of products using product ID.
+• Demo: Products are stored in a hashmap. When the user selects a product ID, details are instantly fetched.
+Array/List (vector):
+• Purpose: Represents a dynamic shopping cart.
+• Demo: Items are added and removed in real time.
+Stack (stack):
+• Purpose: Enables undo feature for the last cart action.
+• Demo: Last added item can be removed.
+Queue (queue):
+• Purpose: Handles customer orders in FIFO order.
+• Demo: Orders are processed in the sequence they were placed.
+3. Efficiency Analysis
+Data Structure	Operation	Time Complexity	Space Complexity	Use Case
+unordered_map	Insert/Search/Delete	O(1) average	O(n)	Product inventory
+vector	Add/Access by index	O(1)	O(n)	Shopping cart
+stack	Push/Pop (Undo)	O(1)	O(n)	Undo action in cart
+queue	Enqueue/Dequeue (Orders)	O(1)	O(n)	Order processing
+4. Application of Class Concepts
+Concept	Applied In
+Arrays/Lists	Shopping cart implementation
+Hashmaps	Product ID mapping and quick search
+Queues	Managing customer order queue
+Stacks	Undo last cart action
+Algorithm Design	Product search, inventory updates
+Real-World Mapping	Simulating real-world eCommerce system
+
+
+
+
+
+
+
+
